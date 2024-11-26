@@ -410,7 +410,7 @@ def latihan_soal():
 </body>
 </html>
     '''
-        st.components.v1.html(tulisan_html2,width=1100,height=6500)
+        st.components.v1.html(tulisan_html2,width=1100,height=7500)
 def latihan_soal1():
     kol = st.columns(2)
     with kol[0]:
