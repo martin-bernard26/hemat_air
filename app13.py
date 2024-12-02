@@ -8,7 +8,8 @@ st.set_page_config(
     layout="wide",  # Menggunakan lebar penuh layar
     initial_sidebar_state="expanded"  # Sidebar terbuka secara default
 )
-tab = st.tabs(["Ayo Membaca","Latihan","terbagi dua"])
+st.image("https://res.cloudinary.com/ikip-siliwangi/image/upload/v1733135017/fives_epdalm.png",width=200)
+tab = st.tabs(["Ayo Membaca","Latihan","terbagi dua","Soal Numerasi"])
 def bacaan():
     st.image("https://res.cloudinary.com/ikip-siliwangi/image/upload/v1732177110/hemat_air_y8ccmz.png")
     tulisan_html1='''
@@ -410,7 +411,7 @@ def latihan_soal():
 </body>
 </html>
     '''
-        st.components.v1.html(tulisan_html2,width=1100,height=7500)
+        st.components.v1.html(tulisan_html2,width=1100,height=6500)
 def latihan_soal1():
     kol = st.columns(2)
     with kol[0]:
@@ -661,3 +662,213 @@ with tab[2]:
         bacaan1()
     with kolom[1]:
         latihan_soal1()
+with tab[3]:
+    tuliskan_html5='''
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding:10px;
+            background-color:lightgray
+        }
+        .judul{
+            font-family:"bauhaus 93";
+            font-size:20px;
+            font-weight:bold;
+        }
+        .bagian{
+            font-size:30px;
+            color:blue;
+            text-shadow:2px 2px 2px red;
+        }
+        .bagian1{
+            margin:3px;
+            color:green;
+            font-weight:bold;
+        }
+        .ident{
+            border: 2px solid black;
+            border-radius:5px;
+            width:300px;
+            height:30px;
+            box-shadow:2px 2px 2px 2px orange;
+        }
+        #identitas{
+            padding:5px;
+            border:2px solid black;
+            border-radius:3px;
+            box-shadow:2px 2px 2px 2px yellow;
+            margin:5px;
+            background-color:mistyrose
+        }
+        #petunjuk{
+            border: 2px solid black;
+            border-radius:5px;
+            background-color:cyan;
+            padding:5px;
+            font-size:18px;
+            text-align:justify;
+        }
+        .bagian2{
+            color:brown;
+            font-weight:bold;
+            font-size:20px;
+            margin:5px;
+        }
+        ul li{
+            margin:3px;
+            font-size:20px;
+        }
+        .bagian3{
+            border:3px solid black;
+            border-radius:10px;
+            box-shadow:2px 2px 2px 2px green;
+        }
+        #kirim1{
+            font-family:broadway;
+            font-size:20px;
+            background-color:green;
+            color:yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="judul bagian">Tugas Numerasi: Hemat Air, Cara Mudah Menyelamatkan Bumi</div>
+    <div id="identitas">
+        <div class="bagian1" id="nama">Nama: <input class="ident" type="text"></div>
+        <div class="bagian1" id="kelas">Kelas: <input class="ident" type="text"></div>
+    </div>
+    <div class="judul">Petunjuk</div>
+    <div id="petunjuk">Bacalah teks <b><i>"Hemat Air, Cara Mudah Menyelamatkan Bumi" </i></b>untuk menjawab pertanyaan-pertanyaan berikut. 
+        Jawablah dengan jelas dan lengkap!</div>
+    <div class="judul">Soal-soal:</div>
+    <div>
+        <ol>
+            <li><div class="bagian2">Berapa liter air yang terbuang?</div>
+                <ul type="circle">
+                <li>Ayah kaget saat melihat bak mandi meluap karena Aini lupa menutup keran air. 
+                    Jika dalam satu menit keran mengalirkan air sebanyak 2 liter dan Aini lupa 
+                    menutup keran selama 30 menit, berapa liter air yang terbuang?</li>
+                <div><textarea class="bagian3" id="jawaban1" rows="10" cols="80"></textarea></div>
+                </ul>
+            </li>
+            <li><div class="bagian2">Menghitung Kebutuhan Air dalam Satu Hari</div>
+                <ul type="circle">
+                    <li>Aini biasanya menggunakan air untuk mandi, mencuci tangan, dan minum. 
+                        Jika ia mandi menggunakan 15 liter air, mencuci tangan menggunakan 5 liter, 
+                        dan minum 1 liter per hari, berapa liter air yang ia butuhkan setiap hari?</li>
+                        <div><textarea class="bagian3" id="jawaban2a" rows="10" cols="80"></textarea></div>
+                    <li>Jika Aini mengurangi penggunaan air saat mandi menjadi 10 liter, 
+                        berapa penghematan yang ia lakukan?</li>
+                    <div><textarea class="bagian3" id="jawaban2b" rows="10" cols="80"></textarea></div>
+                </ul>
+            </li>
+            <li><div class="bagian2">Estimasi Air untuk Satu Minggu</div>
+                <ul type="circle">
+                    <li>Hitung total air yang dibutuhkan Aini dalam seminggu untuk mandi, 
+                        mencuci tangan, dan minum (gunakan jawaban dari nomor 2 untuk 
+                        hitungan per hari).</li>
+                        <div><textarea id="jawaban3" class="bagian3" rows="10" cols="80"></textarea></div>
+                </ul>
+            </li>
+            <li><div class="bagian2">Membandingkan Penggunaan Air</div>
+                <ul type="circle">
+                    <li>Aini menggunakan 15 liter air untuk mandi, sedangkan adiknya hanya menggunakan
+                         10 liter. Berapa banyak air yang lebih sedikit digunakan oleh adik 
+                         Aini setiap hari?</li>
+                        <div><textarea class="bagian3" id="jawaban4a" rows="10" cols="80"></textarea></div>
+                    <li>Jika mereka berdua mandi setiap hari selama satu bulan (30 hari), berapa banyak 
+                        air yang dihemat oleh adik Aini dibandingkan Aini?</li>
+                        <div><textarea class="bagian3" id="jawaban4b" rows="10" cols="80"></textarea></div>
+                </ul>
+            </li>
+            <li><div class="bagian2">Konservasi Air dalam Kehidupan Sehari-hari</div>
+                <ul type="circle">
+                    <li>Dalam teks disebutkan bahwa sepertiga penduduk dunia mengalami 
+                        kesulitan air. Jika populasi dunia adalah sekitar 7,8 miliar orang, 
+                        kira-kira berapa jumlah orang yang mengalami kesulitan air?</li>
+                        <div><textarea class="bagian3" id="jawaban5" rows="10" cols="80"></textarea></div>
+                </ul>
+            </li>
+            <li><div class="bagian2">Menulis dan Menggambar Strategi Hemat Air</div>
+                <ul type="circle">
+                    <li>Tuliskan 3 cara sederhana yang bisa kamu lakukan untuk menghemat air 
+                        di rumah. Jelaskan setiap cara tersebut.</li>
+                        <div><textarea class="bagian3" id="jawaban6a" rows="10" cols="80"></textarea></div>
+                    <li>Buatlah gambar atau diagram alur untuk salah satu cara di atas, 
+                        misalnya, langkah-langkah mematikan keran setelah selesai 
+                        menggunakan air.</li>
+                        <div><textarea class="bagian3" id="jawaban6b" rows="10" cols="80"></textarea></div>
+                </ul>
+            </li>
+        </ol>
+    </div>
+    <div><input type="button" value="Kirim" id="kirim1"></div>
+    <script type="module">
+        // Konfigurasi Firebase SDK
+        import {initializeApp} from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+        const firebaseConfig = {
+                apiKey: "AIzaSyCkgVmk75UTkos2y1Mrc7d3-sxShMfbeJQ",
+                authDomain: "natural-ethos-423713-e0.firebaseapp.com",
+                databaseURL: "https://natural-ethos-423713-e0-default-rtdb.firebaseio.com",
+                projectId: "natural-ethos-423713-e0",
+                storageBucket: "natural-ethos-423713-e0.firebasestorage.app",
+                messagingSenderId: "41833960811",
+                appId: "1:41833960811:web:6218d6ac2f3538c704e82e",
+        };
+
+        // Inisialisasi Firebase
+        const app = initializeApp(firebaseConfig);
+        import {getDatabase, set, get, update, remove, ref, child}
+            from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
+        const db=getDatabase()
+        var kirim1 = document.getElementById("kirim1")
+        kirim1.addEventListener("click",()=>{
+            var nama = document.getElementById("nama").value
+            var kelas = document.getElementById("kelas").value
+            var soal1 = document.getElementsByClassName("pertanyaan1")
+            var soal2a = document.getElementsByClassName("pertanyaan2a")
+            var soal2b = document.getElementsByClassName("pertanyaan2b")
+            var soal3 = document.getElementsByClassName("pertanyaan3")
+            var soal4a = document.getElementsByClassName("pertanyaan4a")
+            var soal4b = document.getElementsByClassName("pertanyaan4b")
+            var soal5 = document.getElementsByClassName("pertanyaan5")
+            var soal6a = document.getElementsByClassName("pertanyaan6a")
+            var soal6b = document.getElementsByClassName("pertanyaan6b")
+            set(ref(db, 'hematAirNumerasi/' + nama), { 
+                nama:nama,
+                kelas:kelas,
+            })
+                .then(() => {
+                    alert('Data added successfully');
+                })
+                .catch((error) => {
+                console.error("Error adding data:", error);
+            });
+            set(ref(db, 'hematAirNumerasi1/' + nama+'/soal'), {
+                soal1:soal1.value,
+                soal2a:soal2a.value,
+                soal2b:soal2b.value,
+                soal3:soal3.value,
+                soal4a:soal4a.value,
+                soal4b:soal4b.value,
+                soal5:soal5.value,
+                soal6a:soal6a.value,
+                soal6b:soal6b.value,
+            })
+                .then(() => {
+                    alert('Data added successfully');
+                })
+                .catch((error) => {
+                console.error("Error adding data:", error);
+            });
+        });
+</script>
+</body>
+</html>
+    '''
+    st.components.v1.html(tuliskan_html5,width=1000,height=2600)
