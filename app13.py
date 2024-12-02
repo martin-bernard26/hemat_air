@@ -871,4 +871,4 @@ with tab[3]:
 </body>
 </html>
     '''
-    st.components.v1.html(tuliskan_html5,width=1000,height=2600)
+    st.components.v1.html(tuliskan_html5,width=1000,height=2800)
